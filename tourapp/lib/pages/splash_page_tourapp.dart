@@ -25,7 +25,7 @@ class _SplashPageState extends State<SplashPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              child: const Image(image: AssetImage("/logotipo_sinfondo.png"), width: 150, height: 150),
+              child: Image.asset("assets/logotipo_sinfondo.png", width: 150, height: 150),
               padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 40),
               margin: const EdgeInsets.all(30),
               decoration: BoxDecoration(

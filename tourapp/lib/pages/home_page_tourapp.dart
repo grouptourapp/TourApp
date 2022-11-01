@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
                   const SizedBox(height: 20,),
                   Text('Las Cinco Joyas Ocultas de Quibdó', style: Theme.of(context).textTheme.headline5,),
                   Container(
-                    child: const Image(image: AssetImage("/quibdo_ppal.jpg"), width: 300, height: 300),
+                    child: Image.asset("assets/quibdo_ppal.jpg", width: 300, height: 300),
                     padding: const EdgeInsets.symmetric(vertical: 1, horizontal: 1),
                   ),
                   Container(

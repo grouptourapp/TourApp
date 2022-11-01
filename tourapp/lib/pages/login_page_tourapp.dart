@@ -18,7 +18,7 @@ class _LoginPageState extends State<LoginPage> {
   void validarUsuario(){
 
     if(email.text.isNotEmpty && password.text.isNotEmpty){
-      if(email.text=="12345") {
+      if(email.text=="juan.lasso@gmail.com") {
         if (password.text == "12345") {
           Navigator.pushReplacement(
               context, MaterialPageRoute(builder: (context) => const HomePage()));
@@ -60,7 +60,8 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               children: [
                 Container(
-                  child: const Image( image: AssetImage("/logotipo_sinfondo.png"), width: 120, height: 120),
+                  child: Image.asset("assets/logotipo_sinfondo.png",width: 120,height: 120),
+
                   padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 40),
                   margin: const EdgeInsets.all(30),
                   decoration: BoxDecoration(
