@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:tourapp/pages/splash_page_tourapp.dart';
+//import 'package:firebase_core/firebase_core.dart';
+//import 'firebase_options.dart';
 
 void main() {
   runApp(const MyApp());
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -13,8 +15,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'TourApp',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        //canvasColor: const Color(0xfffce083)
+        backgroundColor: Colors.yellow,
       ),
       home: const SplashPage(),
     );

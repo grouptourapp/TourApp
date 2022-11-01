@@ -19,27 +19,27 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.yellow,
-        body: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Container(
-                    child: const Image(image: AssetImage("/logotipo_sinfondo.png"), width: 150, height: 150),
-                       padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 40),
-                       margin: const EdgeInsets.all(30),
-                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(200),
-                          border: Border.all(color: Colors.black38, width: 4),
-                          color: Colors.blue,
-                       ),
-                ),
-                SizedBox(height: 20,),
-                Text('Bienvenidos', style: Theme.of(context).textTheme.headline5,
-                ),
-              ],
+      backgroundColor: Colors.yellow,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              child: const Image(image: AssetImage("/logotipo_sinfondo.png"), width: 150, height: 150),
+              padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 40),
+              margin: const EdgeInsets.all(30),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(200),
+                border: Border.all(color: Colors.black38, width: 4),
+                color: Colors.blue,
+              ),
             ),
+            SizedBox(height: 20,),
+            Text('Bienvenidos', style: Theme.of(context).textTheme.headline5,
+            ),
+          ],
         ),
+      ),
     );
   }
 }
