@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tourapp/pages/menu_page_tourapp.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -13,9 +14,10 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Edificaciones de interés cultural de la Nación."),
+        title: const Text("Edificaciones de interés cultural de la Nación."),
       ),
-      backgroundColor: Colors.yellow,
+      drawer: MenuPage(),
+      backgroundColor: Colors.cyanAccent,
       //backgroundColor: Colors.transparent,
       body: Container(
         decoration: const BoxDecoration(

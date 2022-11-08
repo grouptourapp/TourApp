@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'login_page_tourapp.dart';
+import 'package:tourapp/repositorio/usuario_registrar_tourapp.dart';
+import '../modelo/usuario_modelo_tourapp.dart';
+
 
 class RegistrarPage extends StatefulWidget {
   const RegistrarPage({Key? key}) : super(key: key);
@@ -18,13 +21,68 @@ class _RegistrarPageState extends State<RegistrarPage> {
   final email=TextEditingController();
   final password=TextEditingController();
   final passwordConf=TextEditingController();
+  Usuario_Registrar usuario= Usuario_Registrar();
+  late mensaje msg;
 
   Genero? _genero= Genero.Femenino;
 
+  void guardarUsuario(Usuario usuNew) async {
+    var resultado= await usuario.registrarUsuario(email.text, password.text);
+
+    if(resultado=="invalid-email"){
+      msg.mostrarMensaje("El formato del Email no es correcto.");
+    }else
+    if(resultado=="weak-password"){
+      msg.mostrarMensaje("La contraseña debe tener minimo 6 caracteres.");
+    }else
+    if(resultado=="unknown"){
+      msg.mostrarMensaje("Complete los datos.");
+    }else
+    if(resultado=="network-request-failed"){
+      msg.mostrarMensaje("Revise la conexion a internet.");
+    }else{
+      usuNew.id=resultado;
+      registrarUsuario(usuNew);
+      msg.mensajeOk("Usuario Registrado exitosamente, inicie sesion.");
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const LoginPage()));
+    }
+  }
+
+  void registrarUsuario(Usuario usuNew) async{
+    var id= await usuario.crearUsuario(usuNew);
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> const LoginPage()));
+  }
+
+
+
+  void traerDatos(){
+
+    setState(() {
+      if(password.text == passwordConf.text){
+        if(nombres.text.isNotEmpty && apellidos.text.isNotEmpty && email.text.isNotEmpty &&
+            telefono.text.isNotEmpty && direccion.text.isNotEmpty && password.text.isNotEmpty && passwordConf.text.isNotEmpty){
+          String gen ="Femenino";
+          if(_genero==Genero.Masculino){
+            gen="Masculino";
+          }
+          var usuNew= Usuario("", nombres.text, apellidos.text, email.text, telefono.text, direccion.text, gen, password.text);
+          guardarUsuario(usuNew);
+        }else{
+          msg.mostrarMensaje("Datos Incompletos.");
+        }
+      }else{
+        msg.mostrarMensaje("Las contraseñas no coinciden.");
+      }
+    });
+  }
+
+
+
   @override
   Widget build(BuildContext context) {
+    msg=mensaje(context);
     return Scaffold(
-      backgroundColor: Colors.yellow,
+      backgroundColor: Colors.white,
       //backgroundColor: Colors.transparent,
       body: Container(
         decoration: const BoxDecoration(
@@ -200,6 +258,7 @@ class _RegistrarPageState extends State<RegistrarPage> {
                                       fontStyle: FontStyle.italic,
                                       fontSize: 20)),
                               onPressed:(){
+                                traerDatos();
 
                               },
                               child: const Text("Registrarse"))

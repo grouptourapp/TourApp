@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tourapp/pages/home_page_tourapp.dart';
 import 'package:tourapp/pages/registrar_page_tourapp.dart';
-import 'package:tourapp/pages/registrar_page_tourapp.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -14,23 +14,45 @@ class _LoginPageState extends State<LoginPage> {
 
   final email=TextEditingController();
   final password=TextEditingController();
+  FirebaseAuth auth=FirebaseAuth.instance; //variable para login
+  late final mensaje msg;
 
-  void validarUsuario(){
 
-    if(email.text.isNotEmpty && password.text.isNotEmpty){
-      if(email.text=="juan.lasso@gmail.com") {
-        if (password.text == "12345") {
-          Navigator.pushReplacement(
-              context, MaterialPageRoute(builder: (context) => const HomePage()));
-        } else {
-          mostrarMensaje("Contraseña Incorrecta.");
-        }
-      }else{  mostrarMensaje("Usuario no registrado."); }
-    }else{
-      mostrarMensaje("Datos Obligatorios.");
+  void validarUsuario() async {
+    //validar si ubuario NO  esta vacio
+
+    try { //bloque tri cas, ejecuta, solo el bloque
+
+
+      final user = await auth.signInWithEmailAndPassword(email: email.text, password: password.text);
+      if(user != null){
+        msg.mostrarMensaje("Bienvenido!!!!");
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const HomePage()));
+      }
+
+
+    } on FirebaseAuthException catch (e) { //validar las escecciones
+      //mostrarMensaje("${e.code}");
+
+      if(e.code=="invalid-email"){
+        msg.mostrarMensaje("El formato del Email no es correcto.");
+      }else
+      if(e.code=="user-not-found"){
+        msg.mostrarMensaje("El usuario no esta registrado.");
+      }else
+      if(e.code=="wrong-password"){
+        msg.mostrarMensaje("Contraseña Incorrecta.");
+      }else
+      if(e.code=="unknown"){
+        msg.mostrarMensaje("Complete los datos.");
+      }else
+      if(e.code=="network-request-failed"){
+        msg.mostrarMensaje("Revise la conexion a internet.");
+      }
     }
   }
 
+  /*
   void mostrarMensaje(String mensaje){
     final pantalla=ScaffoldMessenger.of(context);
     pantalla.showSnackBar(
@@ -48,9 +70,11 @@ class _LoginPageState extends State<LoginPage> {
         )
     );
   }
+*/
 
   @override
   Widget build(BuildContext context) {
+    msg= mensaje(context);
     return Scaffold(
       backgroundColor: Colors.yellow,
       body: SingleChildScrollView(
@@ -136,3 +160,40 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
+
+  class mensaje{
+
+    late BuildContext context;
+
+    mensaje(this.context);
+
+    void mostrarMensaje(String mensaje){
+      final pantalla=ScaffoldMessenger.of(context);
+      pantalla.showSnackBar(
+          SnackBar(
+            content: Text(mensaje, style: const TextStyle(fontSize: 20),),
+            backgroundColor: const Color(0xFFD50000),
+            duration: const Duration(seconds: 10),
+            action: SnackBarAction(
+                label: 'Registrese',
+                onPressed: (){
+                  pantalla.hideCurrentSnackBar;
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> RegistrarPage()));
+                }
+
+            ),
+          )
+      );
+    }
+
+    void mensajeOk(String mensaje){
+      final pantalla=ScaffoldMessenger.of(context);
+      pantalla.showSnackBar(
+          SnackBar(
+            content: Text(mensaje, style: const TextStyle(fontSize: 20),),
+            backgroundColor: const Color(0xFF4CAF50),
+            duration: const Duration(seconds: 10),
+          )
+      );
+    }
+  }
