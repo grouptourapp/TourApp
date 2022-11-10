@@ -19,13 +19,13 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.yellow,
+        //backgroundColor: Colors.transparent,
         body: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Container(
-                    child: const Image(image: AssetImage("/logotipo_sinfondo.png"), width: 150, height: 150),
+                    child: const Image(image: AssetImage("assets/logotipo_sinfondo.png"), width: 150, height: 150),
                        padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 40),
                        margin: const EdgeInsets.all(30),
                        decoration: BoxDecoration(
@@ -35,7 +35,11 @@ class _SplashPageState extends State<SplashPage> {
                        ),
                 ),
                 SizedBox(height: 20,),
-                Text('Bienvenidos', style: Theme.of(context).textTheme.headline5,
+                Text('Bienvenidos',style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 32.0,
+
+                ),//, style:  Theme.of(context).textTheme.headline5,
                 ),
               ],
             ),

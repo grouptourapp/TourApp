@@ -12,9 +12,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'TourApp',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        canvasColor:const Color(0xFF1A237E)
       ),
       home: const SplashPage(),
     );
