@@ -22,7 +22,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         //canvasColor: const Color(0xfffce083)
-        backgroundColor: Colors.yellow,
+        //Hice cambio color verde
+        backgroundColor: Colors.greenAccent,
       ),
       home: const SplashPage(),
     );
