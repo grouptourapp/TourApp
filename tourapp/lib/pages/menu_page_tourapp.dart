@@ -26,10 +26,7 @@ class MenuPage extends StatelessWidget{
                   onTap:(){
                   FirebaseAuth.instance.signOut();
                   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const LoginPage()));
-
-
-    },
-
+              },
               )
             ],
           )
@@ -37,5 +34,4 @@ class MenuPage extends StatelessWidget{
       ),
     );
   }
-
 }
