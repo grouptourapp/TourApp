@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
 
-class joya_1_palacio extends StatefulWidget {
-  const joya_1_palacio({Key? key}) : super(key: key);
+class joya_5_Carcel extends StatefulWidget {
+  const joya_5_Carcel({Key? key}) : super(key: key);
 
   @override
-  State<joya_1_palacio> createState() => _joya_1_palacioState();
+  State<joya_5_Carcel> createState() => _joya_5_CarcelState();
 }
 
-class _joya_1_palacioState extends State<joya_1_palacio> {
+class _joya_5_CarcelState extends State<joya_5_Carcel> {
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
 
       appBar: AppBar(
-        title: const Text('PALACIO EPISCOPAL',
-                  style: TextStyle( fontSize:14),),
-                  centerTitle: true
+          title: const Text('Carcel Anayansi',
+            style: TextStyle( fontSize:14),),
+          centerTitle: true
 
       ),
 
-       body: Padding(
+      body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
         child: SingleChildScrollView(
           child: Center(
@@ -37,7 +37,6 @@ class _joya_1_palacioState extends State<joya_1_palacio> {
                   height: 200,
                 ) ,
                 const SizedBox(height: 40,),
-
 
                 Container(
 
@@ -87,7 +86,7 @@ class _joya_1_palacioState extends State<joya_1_palacio> {
                       padding: const EdgeInsets.symmetric(horizontal: 15),
                       child: Column(
                         children:const [
-                          Text('DESCRIPCION   ',
+                          Text('DESCRIPCION',
                             style: TextStyle(color: Colors.white,fontSize: 22),),
                           SizedBox(height: 10,),
 
@@ -98,10 +97,8 @@ class _joya_1_palacioState extends State<joya_1_palacio> {
                       ),
                     )
                 ),
-                const SizedBox(height: 20,),
 
 
-                const SizedBox(height: 40,)
               ],
             ),
           ),
@@ -110,52 +107,3 @@ class _joya_1_palacioState extends State<joya_1_palacio> {
     );
   }
 }
-
-/*import 'package:flutter/material.dart';
-
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
-
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-
-      appBar: AppBar(
-        title: const Text('PALACIO EPISCOPAL',
-                  style: TextStyle( fontSize:14),
-        ),
-            centerTitle: true
-      ),
-
-       body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 20),
-        child: SingleChildScrollView(
-          child: Center(
-            child: Column(
-              children: [
-                const SizedBox(height: 20,),
-
-
-                Container(
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(25.0),
-                      image: const DecorationImage (image: AssetImage("assets/palacio episcopal.png"), fit: BoxFit.cover)
-                  ),
-                  width: double.infinity,
-                  height: 200,
-                ) ,
-                const SizedBox(height: 40,),
-		const SizedBox(height: 40,)
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-} */
