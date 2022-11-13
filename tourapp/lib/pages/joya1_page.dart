@@ -28,7 +28,6 @@ class _joya_1_palacioState extends State<joya_1_palacio> {
               children: [
                 const SizedBox(height: 20,),
 
-
                 Container(
                   decoration: BoxDecoration(borderRadius: BorderRadius.circular(25.0),
                       image: const DecorationImage (image: AssetImage("assets/palacio episcopal.png"), fit: BoxFit.cover)
@@ -37,8 +36,6 @@ class _joya_1_palacioState extends State<joya_1_palacio> {
                   height: 200,
                 ) ,
                 const SizedBox(height: 40,),
-
-
                 Container(
 
                   decoration: BoxDecoration(
