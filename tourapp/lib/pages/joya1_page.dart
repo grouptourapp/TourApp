@@ -49,25 +49,25 @@ class _joya_1_palacioState extends State<joya_1_palacio> {
                       Column(
                         children: const [
 
-                          Text('Ciudad', style: TextStyle(color: Colors.white),),
+                          Text('JOYA 1', style: TextStyle(color: Colors.white),),
                           Icon(Icons.location_city,size: 60,color:Colors.deepOrange ),
+                          Text( 'PALACIO EPISCOPAL', style: TextStyle(color: Colors.white,fontSize: 16),),
+                        ],
+                      ),
+                      Column(
+                        children: const [
+
+                          Text('Ciudad', style: TextStyle(color: Colors.white),),
+                          Icon(Icons.pin_drop_outlined,size: 60, color:Colors.deepOrange ),
                           Text( 'Quibdó', style: TextStyle(color: Colors.white,fontSize: 22),),
                         ],
                       ),
                       Column(
                         children: const [
 
-                          Text('Departamento', style: TextStyle(color: Colors.white),),
-                          Icon(Icons.pin_drop_outlined,size: 60, color:Colors.deepOrange ),
-                          Text( 'Choco', style: TextStyle(color: Colors.white,fontSize: 22),),
-                        ],
-                      ),
-                      Column(
-                        children: const [
-
-                          Text('Temperatura', style: TextStyle(color: Colors.white),),
+                          Text('Tipo monumento ', style: TextStyle(color: Colors.white),),
                           Icon(Icons.thermostat,size: 60, color:Colors.deepOrange ),
-                          Text( '27 Grados', style: TextStyle(color: Colors.white,fontSize: 22),),
+                          Text( 'Nacional', style: TextStyle(color: Colors.white,fontSize: 22),),
                         ],
                       ),
 
@@ -88,7 +88,7 @@ class _joya_1_palacioState extends State<joya_1_palacio> {
                             style: TextStyle(color: Colors.white,fontSize: 22),),
                           SizedBox(height: 10,),
 
-                          Text('Ofrecer información actualizada a los cibernautas, sobre los sitios turísticos de la Ciudad de Quibdó, su patrimonio histórico  y cultural, ha sido un sitio ideal para practicar la actividad turística. ',
+                          Text('Se encuentra a orillas del río Atrato, construida en 1931, es parte fundamental del paisaje. Se trata de una obra aireada y proporcionada, con escalinatas de acceso. Se destacan los remates en pináculos (pequeñas torres) y un rico patio circundante con arcadas, que proporcionan un agradable clima interior.',
                             style: TextStyle(color: Colors.white),),
                           SizedBox(height: 20,),
                         ],
