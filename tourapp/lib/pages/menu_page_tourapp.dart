@@ -13,7 +13,7 @@ class MenuPage extends StatelessWidget{
         children: [
           DrawerHeader(
             decoration: const BoxDecoration(
-                color: Colors.cyanAccent
+                color: Colors.lightBlue
             ),
             child: Image.asset("assets/icono.png",width: 60,height: 60),
           ),

@@ -20,15 +20,15 @@ class _LoginPageState extends State<LoginPage> {
 
   void validarUsuario() async {
     //validar si ubuario NO  esta vacio
-    try { //bloque tri cas, ejecuta, solo el bloque
+    try { //bloque try catch, ejecuta, solo el bloque
 
       final user = await auth.signInWithEmailAndPassword(email: email.text, password: password.text);
       if(user != null){
-        msg.mostrarMensaje("Bienvenido!!!!");
+        msg.mensajeOk("Bienvenido!!!!");
         Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const HomePage()));
       }
 
-    } on FirebaseAuthException catch (e) { //validar las escecciones
+    } on FirebaseAuthException catch (e) { //validar las excepciones
       //mostrarMensaje("${e.code}");
       if(e.code=="invalid-email"){
         msg.mostrarMensaje("El formato del Email no es correcto.");
@@ -127,7 +127,8 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height: 20,),
                 ElevatedButton(
                   onPressed:(){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage()));
+                    validarUsuario();
+                    //Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage()));
                     //Navigator.push(context, MaterialPageRoute(builder: (context) => const RegistrarPage()));
                   },
                   child: const Text("Ingresar"),
