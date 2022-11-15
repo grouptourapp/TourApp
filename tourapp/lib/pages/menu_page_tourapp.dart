@@ -13,7 +13,7 @@ class MenuPage extends StatelessWidget{
         children: [
           DrawerHeader(
             decoration: const BoxDecoration(
-                color: Colors.cyanAccent
+                color: Colors.lightBlue
             ),
             child: Image.asset("assets/icono.png",width: 60,height: 60),
           ),
@@ -26,10 +26,7 @@ class MenuPage extends StatelessWidget{
                   onTap:(){
                   FirebaseAuth.instance.signOut();
                   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const LoginPage()));
-
-
-    },
-
+              },
               )
             ],
           )
@@ -37,5 +34,4 @@ class MenuPage extends StatelessWidget{
       ),
     );
   }
-
 }

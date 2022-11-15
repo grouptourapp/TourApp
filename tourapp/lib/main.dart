@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/material.dart';
 import 'package:tourapp/pages/splash_page_tourapp.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -20,9 +19,10 @@ class MyApp extends StatelessWidget {
       title: 'TourApp',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        //canvasColor: const Color(0xfffce083)
-        backgroundColor: Colors.yellow,
+        //primarySwatch: Color(0xff9fd9fe),
+        canvasColor: const Color(0xff1a2f5a)
+        //Hice cambio color verde
+
       ),
       home: const SplashPage(),
     );
@@ -66,11 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+       // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
