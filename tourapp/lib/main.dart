@@ -22,7 +22,6 @@ class MyApp extends StatelessWidget {
         //primarySwatch: Color(0xff9fd9fe),
         canvasColor: const Color(0xff1a2f5a)
         //Hice cambio color verde
-
       ),
       home: const SplashPage(),
     );
@@ -38,13 +37,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -59,10 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
             const Text(
               'You have pushed the button this many times:',
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
+
           ],
         ),
       ),

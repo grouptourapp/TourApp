@@ -50,7 +50,7 @@ class _joya_1_palacioState extends State<joya_1_palacio> {
                         children: const [
 
                           Text('JOYA 1', style: TextStyle(color: Colors.white),),
-                          Icon(Icons.location_city,size: 60,color:Colors.deepOrange ),
+                          Icon(Icons.diamond_outlined,size: 60,color:Colors.deepOrange ),
                           Text( 'PALACIO EPISCOPAL', style: TextStyle(color: Colors.white,fontSize: 16),),
                         ],
                       ),
@@ -59,15 +59,15 @@ class _joya_1_palacioState extends State<joya_1_palacio> {
 
                           Text('Ciudad', style: TextStyle(color: Colors.white),),
                           Icon(Icons.pin_drop_outlined,size: 60, color:Colors.deepOrange ),
-                          Text( 'Quibdó', style: TextStyle(color: Colors.white,fontSize: 22),),
+                          Text( 'QUIBDO', style: TextStyle(color: Colors.white,fontSize: 16),),
                         ],
                       ),
                       Column(
                         children: const [
 
                           Text('Tipo monumento ', style: TextStyle(color: Colors.white),),
-                          Icon(Icons.thermostat,size: 60, color:Colors.deepOrange ),
-                          Text( 'Nacional', style: TextStyle(color: Colors.white,fontSize: 22),),
+                          Icon(Icons.location_city,size: 60, color:Colors.deepOrange ),
+                          Text( 'NACIONAL', style: TextStyle(color: Colors.white,fontSize: 16),),
                         ],
                       ),
 

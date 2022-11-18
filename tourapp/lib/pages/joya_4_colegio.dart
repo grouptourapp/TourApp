@@ -31,7 +31,7 @@ class _joya_4_colegio_carrasquillaState extends State<joya_4_colegio_carrasquill
 
                 Container(
                   decoration: BoxDecoration(borderRadius: BorderRadius.circular(25.0),
-                      image: const DecorationImage (image: AssetImage("assets/palacio episcopal.png"), fit: BoxFit.cover)
+                      image: const DecorationImage (image: AssetImage("assets/col_carrasquilla.png"), fit: BoxFit.cover)
                   ),
                   width: double.infinity,
                   height: 200,
@@ -53,7 +53,7 @@ class _joya_4_colegio_carrasquillaState extends State<joya_4_colegio_carrasquill
                         children: const [
 
                           Text('JOYA 4', style: TextStyle(color: Colors.white),),
-                          Icon(Icons.location_city,size: 60,color:Colors.deepOrange ),
+                          Icon(Icons.diamond_outlined,size: 60,color:Colors.deepOrange ),
                           Text( 'COL CARRASQUILLA', style: TextStyle(color: Colors.white,fontSize: 14),),
                         ],
                       ),
@@ -62,15 +62,15 @@ class _joya_4_colegio_carrasquillaState extends State<joya_4_colegio_carrasquill
 
                           Text('Ciudad', style: TextStyle(color: Colors.white),),
                           Icon(Icons.pin_drop_outlined,size: 60, color:Colors.deepOrange ),
-                          Text( 'Quibdó', style: TextStyle(color: Colors.white,fontSize: 22),),
+                          Text( 'QUIBDO', style: TextStyle(color: Colors.white,fontSize: 16),),
                         ],
                       ),
                       Column(
                         children: const [
 
                           Text('Tipo monumento ', style: TextStyle(color: Colors.white),),
-                          Icon(Icons.thermostat,size: 60, color:Colors.deepOrange ),
-                          Text( 'Nacional', style: TextStyle(color: Colors.white,fontSize: 22),),
+                          Icon(Icons.location_city,size: 60, color:Colors.deepOrange ),
+                          Text( 'NACIONAL', style: TextStyle(color: Colors.white,fontSize: 18),),
                         ],
                       ),
 
@@ -91,7 +91,7 @@ class _joya_4_colegio_carrasquillaState extends State<joya_4_colegio_carrasquill
                             style: TextStyle(color: Colors.white,fontSize: 22),),
                           SizedBox(height: 10,),
 
-                          Text('Se encuentra a orillas del río Atrato, construida en 1931, es parte fundamental del paisaje. Se trata de una obra aireada y proporcionada, con escalinatas de acceso. Se destacan los remates en pináculos (pequeñas torres) y un rico patio circundante con arcadas, que proporcionan un agradable clima interior.',
+                          Text('Comenzó a ser levantado en 1927. La obras fueron terminas apenas en la década de 1940. La fachada es ecléctica, con capitales jónicos, columnas adosadas ventanas muy trabajadas y arcos. ',
                             style: TextStyle(color: Colors.white),),
                           SizedBox(height: 20,),
                         ],
