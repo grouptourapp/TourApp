@@ -31,7 +31,7 @@ class _joya_2_hospitalState extends State<joya_2_hospital> {
 
                 Container(
                   decoration: BoxDecoration(borderRadius: BorderRadius.circular(25.0),
-                      image: const DecorationImage (image: AssetImage("assets/palacio episcopal.png"), fit: BoxFit.cover)
+                      image: const DecorationImage (image: AssetImage("assets/hospital_sfa1.png"), fit: BoxFit.cover)
                   ),
                   width: double.infinity,
                   height: 200,
@@ -52,8 +52,8 @@ class _joya_2_hospitalState extends State<joya_2_hospital> {
                         children: const [
 
                           Text('JOYA 2', style: TextStyle(color: Colors.white),),
-                          Icon(Icons.location_city,size: 60,color:Colors.deepOrange ),
-                          Text( 'HPTAL San Fco Asis', style: TextStyle(color: Colors.white,fontSize: 16),),
+                          Icon(Icons.diamond_outlined,size: 60,color:Colors.deepOrange ),
+                          Text( 'Hptal San Fco Asis', style: TextStyle(color: Colors.white,fontSize: 16),),
                         ],
                       ),
                       Column(
@@ -61,15 +61,15 @@ class _joya_2_hospitalState extends State<joya_2_hospital> {
 
                           Text('Ciudad', style: TextStyle(color: Colors.white),),
                           Icon(Icons.pin_drop_outlined,size: 60, color:Colors.deepOrange ),
-                          Text( 'Quibdó', style: TextStyle(color: Colors.white,fontSize: 22),),
+                          Text( 'Quibdó', style: TextStyle(color: Colors.white,fontSize: 18),),
                         ],
                       ),
                       Column(
                         children: const [
 
                           Text('Tipo monumento ', style: TextStyle(color: Colors.white),),
-                          Icon(Icons.thermostat,size: 60, color:Colors.deepOrange ),
-                          Text( 'Nacional', style: TextStyle(color: Colors.white,fontSize: 22),),
+                          Icon(Icons.location_city,size: 60, color:Colors.deepOrange ),
+                          Text( 'NACIONAL', style: TextStyle(color: Colors.white,fontSize: 16),),
                         ],
                       ),
 
@@ -90,7 +90,7 @@ class _joya_2_hospitalState extends State<joya_2_hospital> {
                             style: TextStyle(color: Colors.white,fontSize: 22),),
                           SizedBox(height: 10,),
 
-                          Text('Se encuentra a orillas del río Atrato, construida en 1931, es parte fundamental del paisaje. Se trata de una obra aireada y proporcionada, con escalinatas de acceso. Se destacan los remates en pináculos (pequeñas torres) y un rico patio circundante con arcadas, que proporcionan un agradable clima interior.',
+                          Text('Hoy Colegio Santa Coloma, fue terminado en 1929, con base en diseños del alemán E. Altam. Aún cuando está muy deteriorado, todavía se destaca su cúpula, el acceso flaqueando con palmeras y las escalinatas en espiral. Tenía dos leones rampantes, pero solo queda uno en mal estado',
                             style: TextStyle(color: Colors.white),),
                           SizedBox(height: 20,),
                         ],

@@ -31,7 +31,7 @@ class _joya_5_CarcelState extends State<joya_5_Carcel> {
 
                 Container(
                   decoration: BoxDecoration(borderRadius: BorderRadius.circular(25.0),
-                      image: const DecorationImage (image: AssetImage("assets/palacio episcopal.png"), fit: BoxFit.cover)
+                      image: const DecorationImage (image: AssetImage("assets/carcel_frente_.png"), fit: BoxFit.cover)
                   ),
                   width: double.infinity,
                   height: 200,
@@ -52,7 +52,7 @@ class _joya_5_CarcelState extends State<joya_5_Carcel> {
                         children: const [
 
                           Text('JOYA 5', style: TextStyle(color: Colors.white),),
-                          Icon(Icons.location_city,size: 60,color:Colors.deepOrange ),
+                          Icon(Icons.diamond_outlined,size: 60,color:Colors.deepOrange ),
                           Text( 'CÁRCEL ANAYANSI', style: TextStyle(color: Colors.white,fontSize: 15),),
                         ],
                       ),
@@ -61,15 +61,15 @@ class _joya_5_CarcelState extends State<joya_5_Carcel> {
 
                           Text('Ciudad', style: TextStyle(color: Colors.white),),
                           Icon(Icons.pin_drop_outlined,size: 60, color:Colors.deepOrange ),
-                          Text( 'Quibdó', style: TextStyle(color: Colors.white,fontSize: 22),),
+                          Text( 'QUIBDO', style: TextStyle(color: Colors.white,fontSize: 18),),
                         ],
                       ),
                       Column(
                         children: const [
 
                           Text('Tipo monumento ', style: TextStyle(color: Colors.white),),
-                          Icon(Icons.thermostat,size: 60, color:Colors.deepOrange ),
-                          Text( 'Nacional', style: TextStyle(color: Colors.white,fontSize: 22),),
+                          Icon(Icons.location_city,size: 60, color:Colors.deepOrange ),
+                          Text( 'NACIONAL', style: TextStyle(color: Colors.white,fontSize: 18),),
                         ],
                       ),
 
@@ -90,7 +90,10 @@ class _joya_5_CarcelState extends State<joya_5_Carcel> {
                             style: TextStyle(color: Colors.white,fontSize: 22),),
                           SizedBox(height: 10,),
 
-                          Text('Se encuentra a orillas del río Atrato, construida en 1931, es parte fundamental del paisaje. Se trata de una obra aireada y proporcionada, con escalinatas de acceso. Se destacan los remates en pináculos (pequeñas torres) y un rico patio circundante con arcadas, que proporcionan un agradable clima interior.',
+                          Text('Aún funciona como tal, fue inaugurada el 6 de mayo de 1926 como una de las mejores del país. Sus instalaciones mezclan prefabricados y rasgos neoclásicos, '
+                              'la opinión pública la saludó con gran regocijo. De lo mejor que hay en el país, '
+                              'la mejor en cárceles del circuito y solo los panópticos en extensión, ninguna belleza y comodidad.',
+
                             style: TextStyle(color: Colors.white),),
                           SizedBox(height: 20,),
                         ],
