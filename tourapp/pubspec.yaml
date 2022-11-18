@@ -32,10 +32,8 @@ dependencies:
   firebase_core: ^2.1.1
   firebase_auth: ^4.1.0
   cloud_firestore: ^4.0.3
-  hive: ^2.2.3
-  hive_flutter: ^1.1.0
-  google_maps_flutter: ^2.2.1
-
+  font_awesome_flutter: ^10.2.1
+  google_fonts: ^3.0.1
   flutter:
     sdk: flutter
 
@@ -84,7 +82,9 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
+  #fonts:
+
+
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
