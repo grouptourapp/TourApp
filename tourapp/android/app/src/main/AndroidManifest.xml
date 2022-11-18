@@ -4,6 +4,8 @@
         android:label="tourapp"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+       <meta-data android:name="com.google.android.geo.API_KEY"
+           android:value="AIzaSyCYX2pAvwrAm_Z6XFg408R8s5yLIQvZT30"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"
