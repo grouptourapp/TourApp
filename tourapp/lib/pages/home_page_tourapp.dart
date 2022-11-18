@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
 
                 Container(
                   decoration: BoxDecoration(borderRadius: BorderRadius.circular(25.0),
-                      image: const DecorationImage (image: AssetImage("assets/quibdo_letras_color.jpg"), fit: BoxFit.cover)
+                      image: const DecorationImage (image: AssetImage("assets/quibdo_letras_color.png"), fit: BoxFit.cover)
                   ),
                   width: double.infinity,
                   height: 300,
