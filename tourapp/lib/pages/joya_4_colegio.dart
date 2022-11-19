@@ -42,7 +42,7 @@ class _joya_4_colegio_carrasquillaState extends State<joya_4_colegio_carrasquill
                 Container(
 
                   decoration: BoxDecoration(
-                    color: Colors.lightBlueAccent,
+                    color: Color(0xff50c1ea),
                     borderRadius: BorderRadius.circular(12),
                   ),
 
@@ -53,7 +53,7 @@ class _joya_4_colegio_carrasquillaState extends State<joya_4_colegio_carrasquill
                         children: const [
 
                           Text('JOYA 4', style: TextStyle(color: Colors.white),),
-                          Icon(Icons.diamond_outlined,size: 60,color:Colors.deepOrange ),
+                          Icon(Icons.diamond_outlined,size: 60,color:Color(0xffc56c3b) ),
                           Text( 'COL CARRASQUILLA', style: TextStyle(color: Colors.white,fontSize: 14),),
                         ],
                       ),
@@ -61,7 +61,7 @@ class _joya_4_colegio_carrasquillaState extends State<joya_4_colegio_carrasquill
                         children: const [
 
                           Text('Ciudad', style: TextStyle(color: Colors.white),),
-                          Icon(Icons.pin_drop_outlined,size: 60, color:Colors.deepOrange ),
+                          Icon(Icons.pin_drop_outlined,size: 60, color:Color(0xffc56c3b)),
                           Text( 'QUIBDO', style: TextStyle(color: Colors.white,fontSize: 16),),
                         ],
                       ),
@@ -69,7 +69,7 @@ class _joya_4_colegio_carrasquillaState extends State<joya_4_colegio_carrasquill
                         children: const [
 
                           Text('Tipo monumento ', style: TextStyle(color: Colors.white),),
-                          Icon(Icons.location_city,size: 60, color:Colors.deepOrange ),
+                          Icon(Icons.location_city,size: 60, color:Color(0xffc56c3b) ),
                           Text( 'NACIONAL', style: TextStyle(color: Colors.white,fontSize: 18),),
                         ],
                       ),
@@ -80,7 +80,7 @@ class _joya_4_colegio_carrasquillaState extends State<joya_4_colegio_carrasquill
                 const SizedBox(height: 40,),
                 Container(
                     decoration: BoxDecoration(
-                      color: Colors.lightBlueAccent,
+                      color: Color(0xff50c1ea),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Padding(

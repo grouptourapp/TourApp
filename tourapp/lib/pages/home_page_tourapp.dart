@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:tourapp/pages/menu_page_tourapp.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'joya1_page.dart';
@@ -38,7 +39,7 @@ class _HomePageState extends State<HomePage> {
 
                 Container(
                   decoration: BoxDecoration(borderRadius: BorderRadius.circular(25.0),
-                      image: const DecorationImage (image: AssetImage("assets/quibdo_letras_color.jpg"), fit: BoxFit.cover)
+                      image: const DecorationImage (image: AssetImage("assets/quibdo_letras_color.png"), fit: BoxFit.cover)
                   ),
                   width: double.infinity,
                   height: 300,
@@ -48,18 +49,18 @@ class _HomePageState extends State<HomePage> {
                 Container(
 
                   decoration: BoxDecoration(
-                    color: Colors.lightBlueAccent,
+                    color: Color(0xff50c1ea),
                     borderRadius: BorderRadius.circular(12),
                   ),
 
-                  child: Row(
+                    child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children:  [
                       Column(
                         children: const [
 
                           Text('Ciudad', style: TextStyle(color: Colors.white),),
-                          Icon(Icons.location_city,size: 60,color:Colors.deepOrange ),
+                          Icon(Icons.location_city,size: 60,color:Color(0xffc56c3b)),
                           Text( 'Quibdó', style: TextStyle(color: Colors.white,fontSize: 22),),
                         ],
                       ),
@@ -67,7 +68,7 @@ class _HomePageState extends State<HomePage> {
                         children: const [
 
                           Text('Departamento', style: TextStyle(color: Colors.white),),
-                          Icon(Icons.pin_drop_outlined,size: 60, color:Colors.deepOrange ),
+                          Icon(Icons.pin_drop_outlined,size: 60, color:Color(0xffc56c3b) ),
                           Text( 'Choco', style: TextStyle(color: Colors.white,fontSize: 22),),
                         ],
                       ),
@@ -75,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                         children: const [
 
                           Text('Temperatura', style: TextStyle(color: Colors.white),),
-                          Icon(Icons.thermostat,size: 60, color:Colors.deepOrange ),
+                          Icon(Icons.thermostat,size: 60, color:Color(0xffc56c3b) ),
                           Text( '27 Grados', style: TextStyle(color: Colors.white,fontSize: 22),),
                         ],
                       ),
@@ -86,7 +87,7 @@ class _HomePageState extends State<HomePage> {
                 const SizedBox(height: 40,),
                 Container(
                     decoration: BoxDecoration(
-                      color: Colors.lightBlueAccent,
+                      color: Color(0xff50c1ea),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Padding(
@@ -119,11 +120,45 @@ class _HomePageState extends State<HomePage> {
 
                             decoration: BoxDecoration(
                               image: const DecorationImage (image: AssetImage("assets/palacio episcopal.png"), fit: BoxFit.cover),
-                              color: Colors.lightBlueAccent,
+                              color: Color(0xff50c1ea),
                               borderRadius: BorderRadius.circular(20),
-                            ),
+                              ),
 
-                            child: Center(child: Text("joya1")),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Stack(
+                                  children: [
+                                    RatingBar.builder(
+                                      wrapAlignment: WrapAlignment.center,
+                                      itemSize: 30,
+                                      initialRating: 1,
+                                      minRating: 1,
+                                      direction: Axis.horizontal,
+                                      allowHalfRating: false,
+                                      itemCount: 5,
+                                      //itemPadding: const EdgeInsets.symmetric(horizontal: 1),
+                                      itemBuilder: (context, _) => const Icon(
+                                        Icons.star,
+                                        color: Color(0xffc56c3b),
+
+                                      ),
+                                      onRatingUpdate: (rating) {
+                                        print(rating);
+                                      },
+                                    )
+                                  ],
+
+                                ),
+                                Stack(
+                                    alignment: Alignment.bottomCenter,
+                                    children:  [
+                                      Text("JOYA 1",style: GoogleFonts.pottaOne(color:Color(0xffc56c3b),fontSize:22 ),
+                                      ),
+                                    ]
+                                ),
+                              ],
+                            ),
                           ),
                           onTap:() {
 
@@ -137,10 +172,44 @@ class _HomePageState extends State<HomePage> {
                             width:150,
                             decoration: BoxDecoration(
                               image: const DecorationImage (image: AssetImage("assets/hospital_sfa1.png"), fit: BoxFit.cover),
-                              color: Colors.lightBlueAccent,
+                              color: Color(0xff50c1ea),
                               borderRadius: BorderRadius.circular(20),
                             ),
-                            child: Center(child: Text("joya2")),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Stack(
+                                    children:[
+                                      RatingBar.builder(
+                                        wrapAlignment: WrapAlignment.center,
+                                        itemSize: 30,
+                                        initialRating: 1,
+                                        minRating: 1,
+                                        direction: Axis.horizontal,
+                                        allowHalfRating: false,
+                                        itemCount: 5,
+                                        //itemPadding: const EdgeInsets.symmetric(horizontal: 1),
+                                        itemBuilder: (context, _) => const Icon(
+                                          Icons.star,
+                                          color: Color(0xffc56c3b),
+
+                                        ),
+                                        onRatingUpdate: (rating) {
+                                          print(rating);
+                                        },
+                                      )
+                                    ]
+                                ),
+                                Stack(
+                                    alignment: Alignment.bottomCenter,
+                                    children:  [
+                                      Text("JOYA 2",style: GoogleFonts.pottaOne(color:Color(0xffc56c3b),fontSize:22 ),/*style: GoogleFonts.pacifico( textStyle: TexStyle( color: Colors.white,)
+                                    ),*/
+                                      )
+                                    ]
+                                ),
+                              ],
+                            ),
                           ),
                           onTap:() {
                             Navigator.push(context, MaterialPageRoute(builder: (context)=> const joya_2_hospital()));
@@ -152,10 +221,44 @@ class _HomePageState extends State<HomePage> {
                             width:150,
                             decoration: BoxDecoration(
                               image: const DecorationImage (image: AssetImage("assets/escuela_modelo.png"), fit: BoxFit.cover),
-                              color: Colors.lightBlueAccent,
+                              color: Color(0xff50c1ea),
                               borderRadius: BorderRadius.circular(20),
                             ),
-                            child: Center(child: Text("joya3")),
+                            child:  Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Stack(
+                                  children:[
+                                    RatingBar.builder(
+                                      wrapAlignment: WrapAlignment.center,
+                                      itemSize: 30,
+                                      initialRating: 1,
+                                      minRating: 1,
+                                      direction: Axis.horizontal,
+                                      allowHalfRating: false,
+                                      itemCount: 5,
+                                      //itemPadding: const EdgeInsets.symmetric(horizontal: 1),
+                                      itemBuilder: (context, _) => const Icon(
+                                        Icons.star,
+                                        color: Color(0xffc56c3b),
+
+                                      ),
+                                      onRatingUpdate: (rating) {
+                                        print(rating);
+                                      },
+                                    )
+                                  ]
+                                ),
+                                Stack(
+                                    alignment: Alignment.bottomCenter,
+                                    children:  [
+                                      Text("JOYA 3",style: GoogleFonts.pottaOne(color:Color(0xffc56c3b),fontSize:22 ),/*style: GoogleFonts.pacifico( textStyle: TexStyle( color: Colors.white,)
+                                    ),*/
+                                      )
+                                    ]
+                                 ),
+                              ],
+                            ),
                           ),
                           onTap:() {
                             Navigator.push(context, MaterialPageRoute(builder: (context)=> const joya_3_escuela_modelo()));
@@ -167,10 +270,44 @@ class _HomePageState extends State<HomePage> {
                             width:150,
                             decoration: BoxDecoration(
                               image: const DecorationImage (image: AssetImage("assets/col_carrasquilla.png"), fit: BoxFit.cover),
-                              color: Colors.lightBlueAccent,
+                              color: Color(0xff50c1ea),
                               borderRadius: BorderRadius.circular(20),
                             ),
-                            child: Center(child: Text("joya4")),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Stack(
+                                    children:[
+                                      RatingBar.builder(
+                                        wrapAlignment: WrapAlignment.center,
+                                        itemSize: 30,
+                                        initialRating: 1,
+                                        minRating: 1,
+                                        direction: Axis.horizontal,
+                                        allowHalfRating: false,
+                                        itemCount: 5,
+                                        //itemPadding: const EdgeInsets.symmetric(horizontal: 1),
+                                        itemBuilder: (context, _) => const Icon(
+                                          Icons.star,
+                                          color: Color(0xffc56c3b),
+
+                                        ),
+                                        onRatingUpdate: (rating) {
+                                          print(rating);
+                                        },
+                                      )
+                                    ]
+                                ),
+                                Stack(
+                                  alignment: Alignment.bottomCenter,
+                                  children:  [
+                                    Text("JOYA 4",style: GoogleFonts.pottaOne(color:Color(0xffc56c3b),fontSize:22 ),/*style: GoogleFonts.pacifico( textStyle: TexStyle( color: Colors.white,)
+                                    ),*/
+                                    )
+                                  ]
+                                ,),
+                              ],
+                            )
                           ),
                           onTap:() {
                             Navigator.push(context, MaterialPageRoute(builder: (context)=> const joya_4_colegio_carrasquilla()));
@@ -182,16 +319,43 @@ class _HomePageState extends State<HomePage> {
                             width:150,
                             decoration: BoxDecoration(
                               image: const DecorationImage (image: AssetImage("assets/carcel_frente_.png"), fit: BoxFit.cover),
-                              color: Colors.lightBlueAccent,
+                              color: Color(0xff50c1ea),
                               borderRadius: BorderRadius.circular(20),
                             ),
-                            child: Stack(
-                              alignment: Alignment.bottomRight,
-                              children:  [
-                                Text("JOYA 5",style: GoogleFonts.pacifico(color:Colors.deepOrange,fontSize:15 ),/*style: GoogleFonts.pacifico( textStyle: TexStyle( color: Colors.white,)
-                                ),*/
-                                )
-                              ]
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Stack(
+                                  children:[
+                                    RatingBar.builder(
+                                      wrapAlignment: WrapAlignment.center,
+                                      itemSize: 30,
+                                      initialRating: 1,
+                                      minRating: 1,
+                                      direction: Axis.horizontal,
+                                      allowHalfRating: false,
+                                      itemCount: 5,
+                                      //itemPadding: const EdgeInsets.symmetric(horizontal: 1),
+                                      itemBuilder: (context, _) => const Icon(
+                                        Icons.star,
+                                        color: Color(0xffc56c3b),
+
+                                      ),
+                                      onRatingUpdate: (rating) {
+                                        print(rating);
+                                      },
+                                    )
+                                  ]
+                                ),
+                                Stack(
+                                  alignment: Alignment.bottomCenter,
+                                  children:  [
+                                    Text("JOYA 5",style: GoogleFonts.pottaOne(color:Color(0xffc56c3b),fontSize:22),/*style: GoogleFonts.pacifico( textStyle: TexStyle( color: Colors.white,)
+                                    ),*/
+                                    )
+                                  ]
+                                ),
+                              ],
                             ),
                           ),
                           onTap:() {

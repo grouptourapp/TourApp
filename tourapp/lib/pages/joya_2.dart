@@ -41,7 +41,7 @@ class _joya_2_hospitalState extends State<joya_2_hospital> {
                 Container(
 
                   decoration: BoxDecoration(
-                    color: Colors.lightBlueAccent,
+                    color: Color(0xff50c1ea),
                     borderRadius: BorderRadius.circular(12),
                   ),
 
@@ -52,7 +52,7 @@ class _joya_2_hospitalState extends State<joya_2_hospital> {
                         children: const [
 
                           Text('JOYA 2', style: TextStyle(color: Colors.white),),
-                          Icon(Icons.diamond_outlined,size: 60,color:Colors.deepOrange ),
+                          Icon(Icons.diamond_outlined,size: 60,color:Color(0xffc56c3b) ),
                           Text( 'Hptal San Fco Asis', style: TextStyle(color: Colors.white,fontSize: 16),),
                         ],
                       ),
@@ -60,7 +60,7 @@ class _joya_2_hospitalState extends State<joya_2_hospital> {
                         children: const [
 
                           Text('Ciudad', style: TextStyle(color: Colors.white),),
-                          Icon(Icons.pin_drop_outlined,size: 60, color:Colors.deepOrange ),
+                          Icon(Icons.pin_drop_outlined,size: 60, color:Color(0xffc56c3b) ),
                           Text( 'Quibdó', style: TextStyle(color: Colors.white,fontSize: 18),),
                         ],
                       ),
@@ -68,7 +68,7 @@ class _joya_2_hospitalState extends State<joya_2_hospital> {
                         children: const [
 
                           Text('Tipo monumento ', style: TextStyle(color: Colors.white),),
-                          Icon(Icons.location_city,size: 60, color:Colors.deepOrange ),
+                          Icon(Icons.location_city,size: 60, color:Color(0xffc56c3b) ),
                           Text( 'NACIONAL', style: TextStyle(color: Colors.white,fontSize: 16),),
                         ],
                       ),
@@ -79,7 +79,7 @@ class _joya_2_hospitalState extends State<joya_2_hospital> {
                 const SizedBox(height: 40,),
                 Container(
                     decoration: BoxDecoration(
-                      color: Colors.lightBlueAccent,
+                      color: Color(0xff50c1ea),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Padding(

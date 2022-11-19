@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'login_page_tourapp.dart';
 
 class SplashPage extends StatefulWidget {
@@ -34,9 +35,10 @@ class _SplashPageState extends State<SplashPage> {
                 color: Colors.blue,
               ),
             ),
-            SizedBox(height: 20,),
-            Text('Bienvenidos', style: Theme.of(context).textTheme.headline5,
+            const SizedBox(height: 20,),
+                 Text('Bienvenidos', style: GoogleFonts.pottaOne(color:Color(0xffc56c3b),fontSize:22 )
             ),
+
           ],
         ),
       ),

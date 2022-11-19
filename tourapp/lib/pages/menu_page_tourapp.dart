@@ -13,14 +13,14 @@ class MenuPage extends StatelessWidget{
         children: [
           DrawerHeader(
             decoration: const BoxDecoration(
-                color: Colors.lightBlue
+                color: Color(0xff50c1ea)
             ),
             child: Image.asset("assets/icono.png",width: 60,height: 60),
           ),
           Column(
             children: [
               ListTile(
-                leading: const Icon(Icons.exit_to_app, size: 20, color:   Colors.blue,),
+                leading: const Icon(Icons.exit_to_app, size: 20,color: Color(0xff50c1ea),),
                 title: const Text("Salir", style: TextStyle( fontSize: 20),),
                 textColor: Colors.orange,
                   onTap:(){

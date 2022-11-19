@@ -41,7 +41,7 @@ class _joya_5_CarcelState extends State<joya_5_Carcel> {
                 Container(
 
                   decoration: BoxDecoration(
-                    color: Colors.lightBlueAccent,
+                    color: Color(0xff50c1ea),
                     borderRadius: BorderRadius.circular(12),
                   ),
 
@@ -52,7 +52,7 @@ class _joya_5_CarcelState extends State<joya_5_Carcel> {
                         children: const [
 
                           Text('JOYA 5', style: TextStyle(color: Colors.white),),
-                          Icon(Icons.diamond_outlined,size: 60,color:Colors.deepOrange ),
+                          Icon(Icons.diamond_outlined,size: 60,color:Color(0xffc56c3b) ),
                           Text( 'CÁRCEL ANAYANSI', style: TextStyle(color: Colors.white,fontSize: 15),),
                         ],
                       ),
@@ -60,7 +60,7 @@ class _joya_5_CarcelState extends State<joya_5_Carcel> {
                         children: const [
 
                           Text('Ciudad', style: TextStyle(color: Colors.white),),
-                          Icon(Icons.pin_drop_outlined,size: 60, color:Colors.deepOrange ),
+                          Icon(Icons.pin_drop_outlined,size: 60, color:Color(0xffc56c3b)),
                           Text( 'QUIBDO', style: TextStyle(color: Colors.white,fontSize: 18),),
                         ],
                       ),
@@ -68,7 +68,7 @@ class _joya_5_CarcelState extends State<joya_5_Carcel> {
                         children: const [
 
                           Text('Tipo monumento ', style: TextStyle(color: Colors.white),),
-                          Icon(Icons.location_city,size: 60, color:Colors.deepOrange ),
+                          Icon(Icons.location_city,size: 60, color:Color(0xffc56c3b) ),
                           Text( 'NACIONAL', style: TextStyle(color: Colors.white,fontSize: 18),),
                         ],
                       ),
@@ -79,7 +79,7 @@ class _joya_5_CarcelState extends State<joya_5_Carcel> {
                 const SizedBox(height: 40,),
                 Container(
                     decoration: BoxDecoration(
-                      color: Colors.lightBlueAccent,
+                      color: Color(0xff50c1ea),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Padding(
