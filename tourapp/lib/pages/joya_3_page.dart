@@ -42,7 +42,7 @@ class _joya_3_escuela_modeloState extends State<joya_3_escuela_modelo> {
                 Container(
 
                   decoration: BoxDecoration(
-                    color: Colors.lightBlueAccent,
+                    color: Color(0xff50c1ea),
                     borderRadius: BorderRadius.circular(12),
                   ),
 
@@ -53,7 +53,7 @@ class _joya_3_escuela_modeloState extends State<joya_3_escuela_modelo> {
                         children: const [
 
                           Text('JOYA 3', style: TextStyle(color: Colors.white),),
-                          Icon(Icons.diamond_outlined,size: 60,color:Colors.deepOrange ),
+                          Icon(Icons.diamond_outlined,size: 60,color:Color(0xffc56c3b) ),
                           Text( 'ESCUELA MODELO', style: TextStyle(color: Colors.white,fontSize: 15),),
                         ],
                       ),
@@ -61,7 +61,7 @@ class _joya_3_escuela_modeloState extends State<joya_3_escuela_modelo> {
                         children: const [
 
                           Text('Ciudad', style: TextStyle(color: Colors.white),),
-                          Icon(Icons.pin_drop_outlined,size: 60, color:Colors.deepOrange ),
+                          Icon(Icons.pin_drop_outlined,size: 60, color:Color(0xffc56c3b) ),
                           Text( 'QUIBDO', style: TextStyle(color: Colors.white,fontSize: 18
                           ),),
                         ],
@@ -70,7 +70,7 @@ class _joya_3_escuela_modeloState extends State<joya_3_escuela_modelo> {
                         children: const [
 
                           Text('Tipo monumento ', style: TextStyle(color: Colors.white),),
-                          Icon(Icons.location_city,size: 60, color:Colors.deepOrange ),
+                          Icon(Icons.location_city,size: 60, color:Color(0xffc56c3b) ),
                           Text( 'NACIONAL', style: TextStyle(color: Colors.white,fontSize: 18),),
                         ],
                       ),
@@ -81,7 +81,7 @@ class _joya_3_escuela_modeloState extends State<joya_3_escuela_modelo> {
                 const SizedBox(height: 40,),
                 Container(
                     decoration: BoxDecoration(
-                      color: Colors.lightBlueAccent,
+                      color: Color(0xff50c1ea),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Padding(
